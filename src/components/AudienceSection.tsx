@@ -40,7 +40,7 @@ const item = {
 
 const AudienceSection = () => {
   return (
-    <section id="audience" className="py-24 md:py-32 section-padding bg-muted">
+    <section className="py-24 md:py-32 section-padding bg-muted">
       <div className="max-w-[1400px] mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -50,7 +50,7 @@ const AudienceSection = () => {
           className="mb-14"
         >
           <p className="text-[11px] md:text-xs font-bold uppercase tracking-[0.2em] text-muted-foreground mb-4">
-            Кому подойдет
+            По типу задачи
           </p>
           <h2 className="text-3xl md:text-5xl font-black tracking-tight">Выберите свою задачу</h2>
         </motion.div>

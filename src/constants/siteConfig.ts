@@ -22,9 +22,6 @@ export const externalLinks = {
   vk: "https://vk.com/goldapple_ru",
   telegram: "https://t.me/goldapple",
   youtube: "https://www.youtube.com/channel/UC5vsg5-xOIT0N-jilqFSz_w",
-  araviaHair: "https://goldapple.ru/brands/aravia-professional/volosy/aravia-professional",
-  araviaMasks: "https://goldapple.ru/brands/aravia-professional/volosy/aravia-professional/maski",
-  hairSpray: "https://goldapple.ru/19000272876-hair-spray/",
 } as const;
 
 export const localImages = {
@@ -41,41 +38,34 @@ export const localImages = {
 export const imageSources = [
   {
     label: "Hero image",
-    href: "https://www.pexels.com/photo/brown-and-gray-lighted-pump-bottle-with-black-background-2189235/",
-  },
-  {
-    label: "Audience cards image 1",
-    href: "https://www.pexels.com/photo/close-up-shot-of-woman-with-brown-hair-in-white-background-11766341/",
-  },
-  {
-    label: "Audience cards image 2",
-    href: "https://www.pexels.com/photo/beautiful-woman-holding-her-hair-up-against-plain-white-background-24712932/",
-  },
-  {
-    label: "Audience cards image 3",
-    href: "https://www.pexels.com/photo/close-up-shot-of-wig-13074451/",
-  },
-  {
-    label: "Audience cards image 4",
-    href: "https://www.pexels.com/photo/woman-hand-holding-hair-23349909/",
-  },
-  {
-    label: "Step image 1 (cleanse)",
     href: "https://www.pexels.com/photo/close-up-of-cosmetics-flasks-13186049/",
   },
   {
-    label: "Step image 2 (mask)",
+    label: "Сухие",
+    href: "https://www.pexels.com/photo/woman-hand-holding-hair-23349909/",
+  },
+  {
+    label: "Окрашенные",
+    href: "https://www.pexels.com/photo/woman-getting-her-hair-colored-8468126/",
+  },
+  {
+    label: "Поврежденные",
+    href: "https://www.pexels.com/photo/woman-hand-holding-brush-and-brushing-hair-23349904/",
+  },
+  {
+    label: "Пушащиеся",
+    href: "https://www.pexels.com/photo/close-up-of-curly-brown-hair-outdoors-29207671/",
+  },
+  {
+    label: "Шаг 01 / Очищение",
+    href: "https://www.pexels.com/photo/close-up-of-cosmetics-flasks-13186049/",
+  },
+  {
+    label: "Шаг 02 / Интенсивный уход",
     href: "https://www.pexels.com/photo/a-bottle-of-essential-oil-on-a-black-background-18708753/",
   },
   {
-    label: "Step image 3 (protect)",
+    label: "Шаг 03 / Защита",
     href: "https://www.pexels.com/photo/brown-and-gray-lighted-pump-bottle-with-black-background-2189235/",
   },
-] as const;
-
-export const productSourcePages = [
-  externalLinks.hairCatalog,
-  externalLinks.araviaHair,
-  externalLinks.araviaMasks,
-  externalLinks.hairSpray,
 ] as const;
