@@ -1,32 +1,33 @@
 ﻿import { motion } from "framer-motion";
-import stepCleanse from "@/assets/step-cleanse.png";
-import stepTreat from "@/assets/step-treat.png";
-import stepProtect from "@/assets/step-protect.png";
+import { localImages } from "@/constants/siteConfig";
 
 const steps = [
   {
     num: "01",
     title: "Очищение",
     desc: "Мягкий шампунь бережно очищает кожу головы и готовит волосы к основному уходу.",
-    img: stepCleanse,
+    img: localImages.stepCleanse,
+    alt: "Шампунь для бережного очищения волос",
   },
   {
     num: "02",
     title: "Интенсивный уход",
     desc: "Маска или кондиционер восстанавливают длину и помогают снизить ломкость.",
-    img: stepTreat,
+    img: localImages.stepMask,
+    alt: "Маска для интенсивного ухода за волосами",
   },
   {
     num: "03",
     title: "Защита",
     desc: "Несмываемый продукт сохраняет результат и защищает волосы от температуры и UV.",
-    img: stepProtect,
+    img: localImages.stepProtect,
+    alt: "Несмываемый уход для защиты волос",
   },
 ];
 
 const RoutineSection = () => {
   return (
-    <section id="routine" className="py-24 md:py-32 section-padding bg-[#111111] text-white">
+    <section id="how-it-works" className="py-24 md:py-32 section-padding bg-[#111111] text-white">
       <div className="max-w-[1400px] mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -60,8 +61,12 @@ const RoutineSection = () => {
                   whileHover={{ scale: 1.04 }}
                   transition={{ duration: 0.25 }}
                   src={step.img}
-                  alt={step.title}
-                  className="w-3/4 max-h-[80%] object-contain"
+                  alt={step.alt}
+                  width={800}
+                  height={800}
+                  loading="lazy"
+                  decoding="async"
+                  className="w-full h-full object-cover"
                 />
               </div>
 

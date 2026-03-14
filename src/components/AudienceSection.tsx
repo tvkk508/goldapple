@@ -1,28 +1,30 @@
 ﻿import { motion } from "framer-motion";
-import dryHair from "@/assets/dry-hair.png";
-import brittleHair from "@/assets/brittle-hair.png";
-import frizzyHair from "@/assets/frizzy-hair.png";
+import { localImages } from "@/constants/siteConfig";
 
 const cards = [
   {
     title: "Сухие",
     desc: "Тусклость, жесткость и ломкость кончиков из-за нехватки увлажнения.",
-    img: dryHair,
+    img: localImages.audienceDry,
+    alt: "Текстура сухих волос крупным планом",
   },
   {
     title: "Окрашенные",
     desc: "Потеря плотности и яркости цвета после окрашивания или осветления.",
-    img: brittleHair,
+    img: localImages.audienceColored,
+    alt: "Окрашенные волосы крупным планом",
   },
   {
     title: "Поврежденные",
     desc: "Нарушенная структура после термовоздействия и частой укладки.",
-    img: brittleHair,
+    img: localImages.audienceDamaged,
+    alt: "Поврежденные волосы крупным планом",
   },
   {
     title: "Пушащиеся",
     desc: "Нужны контроль, гладкость и предсказуемая укладка каждый день.",
-    img: frizzyHair,
+    img: localImages.audienceFrizzy,
+    alt: "Пушащиеся волосы крупным планом",
   },
 ];
 
@@ -70,7 +72,11 @@ const AudienceSection = () => {
               <div className="aspect-[4/5] overflow-hidden border-b border-border/70 bg-background">
                 <img
                   src={card.img}
-                  alt={card.title}
+                  alt={card.alt}
+                  width={800}
+                  height={1000}
+                  loading="lazy"
+                  decoding="async"
                   className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-[1.04]"
                 />
               </div>

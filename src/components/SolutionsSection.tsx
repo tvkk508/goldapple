@@ -1,7 +1,6 @@
 ﻿import { motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
-
-const catalogUrl = "https://goldapple.ru/volosy/do-50-na-produkty-dlja-volos";
+import { externalLinks } from "@/constants/siteConfig";
 
 const solutions = [
   {
@@ -28,7 +27,7 @@ const solutions = [
 
 const SolutionsSection = () => {
   return (
-    <section id="solutions" className="py-24 md:py-32 section-padding bg-background">
+    <section id="sets" className="py-24 md:py-32 section-padding bg-background">
       <div className="max-w-[1400px] mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -46,7 +45,7 @@ const SolutionsSection = () => {
         <div className="grid md:grid-cols-2 gap-5">
           {solutions.map((sol, i) => (
             <motion.a
-              href={catalogUrl}
+              href={externalLinks.hairCatalog}
               target="_blank"
               rel="noopener noreferrer"
               key={sol.title}

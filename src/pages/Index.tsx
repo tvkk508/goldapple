@@ -1,4 +1,4 @@
-import StickyHeader from "@/components/StickyHeader";
+﻿import StickyHeader from "@/components/StickyHeader";
 import HeroSection from "@/components/HeroSection";
 import AudienceSection from "@/components/AudienceSection";
 import RoutineSection from "@/components/RoutineSection";
@@ -8,6 +8,7 @@ import TrustSection from "@/components/TrustSection";
 import FAQSection from "@/components/FAQSection";
 import FinalCTASection from "@/components/FinalCTASection";
 import FooterSection from "@/components/FooterSection";
+import SourcesSection from "@/components/SourcesSection";
 
 const Index = () => {
   return (
@@ -24,6 +25,7 @@ const Index = () => {
         <FinalCTASection />
       </main>
       <FooterSection />
+      <SourcesSection />
     </>
   );
 };

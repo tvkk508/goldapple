@@ -1,7 +1,5 @@
 ﻿import { motion } from "framer-motion";
-
-const catalogUrl = "https://goldapple.ru/volosy/do-50-na-produkty-dlja-volos";
-const promoUrl = "https://goldapple.ru/";
+import { externalLinks } from "@/constants/siteConfig";
 
 const FinalCTASection = () => {
   return (
@@ -24,7 +22,7 @@ const FinalCTASection = () => {
 
           <div className="flex flex-col sm:flex-row items-center justify-center gap-3">
             <motion.a
-              href={catalogUrl}
+              href={externalLinks.hairCatalog}
               target="_blank"
               rel="noopener noreferrer"
               whileHover={{ scale: 1.02 }}
@@ -34,7 +32,12 @@ const FinalCTASection = () => {
               Подобрать уход
             </motion.a>
 
-            <a href={promoUrl} target="_blank" rel="noopener noreferrer" className="brand-button-secondary border-white/35 text-white hover:bg-white hover:text-black">
+            <a
+              href={externalLinks.promotions}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="brand-button-secondary border-white/35 text-white hover:bg-white hover:text-black"
+            >
               Смотреть акции
             </a>
           </div>

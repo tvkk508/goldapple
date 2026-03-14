@@ -1,12 +1,13 @@
 ﻿import { useEffect, useState } from "react";
 import { motion, useScroll, useSpring } from "framer-motion";
+import { sectionAnchors } from "@/constants/siteConfig";
 
 const navItems = [
-  { label: "Кому подойдет", href: "#audience" },
-  { label: "Как это работает", href: "#routine" },
-  { label: "Подборки", href: "#solutions" },
-  { label: "FAQ", href: "#faq" },
-];
+  { label: "Кому подойдёт", href: sectionAnchors.audience },
+  { label: "Как это работает", href: sectionAnchors.howItWorks },
+  { label: "Подборки", href: sectionAnchors.sets },
+  { label: "FAQ", href: sectionAnchors.faq },
+] as const;
 
 const StickyHeader = () => {
   const [scrolled, setScrolled] = useState(false);
@@ -29,7 +30,7 @@ const StickyHeader = () => {
         }`}
       >
         <div className="section-padding h-16 md:h-20 max-w-[1400px] mx-auto flex items-center justify-between gap-4">
-          <a href="#hero" aria-label="Gold Apple — к началу" className="inline-flex items-center">
+          <a href={sectionAnchors.hero} aria-label="Gold Apple — к началу" className="inline-flex items-center">
             <img
               src="/logo-gold-apple.svg"
               alt="Gold Apple logo"
@@ -51,7 +52,7 @@ const StickyHeader = () => {
             ))}
           </nav>
 
-          <a href="#solutions" className="brand-button px-5 md:px-7 py-2.5 text-[11px] md:text-xs">
+          <a href={sectionAnchors.sets} className="brand-button px-5 md:px-7 py-2.5 text-[11px] md:text-xs">
             Подобрать уход
           </a>
         </div>

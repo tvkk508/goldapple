@@ -1,5 +1,5 @@
 ﻿import { motion } from "framer-motion";
-import heroProducts from "@/assets/hero-products.png";
+import { localImages, sectionAnchors } from "@/constants/siteConfig";
 
 const ease = [0.2, 1, 0.3, 1] as const;
 
@@ -45,8 +45,8 @@ const HeroSection = () => {
             transition={{ duration: 0.6, delay: 0.16, ease }}
             className="text-base md:text-xl text-muted-foreground max-w-xl leading-relaxed mb-8"
           >
-            Подберите персональный сценарий ухода для сухих, окрашенных и поврежденных волос с понятной
-            структурой по шагам.
+            Подберите персональный сценарий ухода для сухих, окрашенных, поврежденных и пушащихся волос с
+            понятной структурой по шагам.
           </motion.p>
 
           <motion.div
@@ -68,10 +68,10 @@ const HeroSection = () => {
             transition={{ duration: 0.5, delay: 0.32, ease }}
             className="flex flex-wrap items-center gap-3"
           >
-            <a href="#solutions" className="brand-button">
+            <a href={sectionAnchors.sets} className="brand-button">
               Подобрать уход
             </a>
-            <a href="#routine" className="brand-button-secondary">
+            <a href={sectionAnchors.howItWorks} className="brand-button-secondary">
               Как это работает
             </a>
           </motion.div>
@@ -85,7 +85,13 @@ const HeroSection = () => {
         >
           <div className="rounded-[2rem] border border-border bg-[#111111] p-7 md:p-8 relative overflow-hidden card-shadow">
             <div className="absolute top-0 left-0 right-0 h-1 bg-primary" />
-            <img src={heroProducts} alt="Набор средств для восстановления волос" className="w-full max-w-md mx-auto" />
+            <img
+              src={localImages.hero}
+              alt="Набор средств для восстановления волос на темном фоне"
+              width={960}
+              height={1200}
+              className="w-full rounded-[1.3rem] aspect-[4/5] object-cover"
+            />
           </div>
 
           <div className="grid sm:grid-cols-3 gap-3">
